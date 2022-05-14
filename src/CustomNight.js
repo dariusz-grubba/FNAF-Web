@@ -5,8 +5,6 @@ import Freddy from "./media/Textures/CustomNight/freddy.png";
 import Bonnie from "./media/Textures/CustomNight/bonnie.png";
 import Chica from "./media/Textures/CustomNight/chica.png";
 import Foxy from "./media/Textures/CustomNight/foxy.png";
-import Laura from "./media/Textures/laura1.png";
-
 
 import { GoldenFreddyJumpscare } from "./components/Images";
 
@@ -22,20 +20,20 @@ const AnimatronicContainer = (props) => {
 
     return (
         <div className={styles.animatronic}>
-            {/* <img
-                altt="Five Nights At Freddy's"
+            <img
+                alt="Five Nights At Freddy's"
                 src={images[character]}
                 title={character}
                 alt={character}
-            /> */}
+            />
 
-            {/* <div className={styles.range_buttons}>
+            <div className={styles.range_buttons}>
                 <button onClick={() => { changeRange(-range, character) }}> 0 </button>
                 <button onClick={() => { changeRange(-1, character) }} disabled={range === 0}> {"<"} </button>
                 <span> {range} </span>
                 <button onClick={() => { changeRange(+1, character) }} disabled={range === 20}> {">"} </button>
                 <button onClick={() => { changeRange(+20 - range, character) }}> 20 </button>
-            </div> */}
+            </div>
         </div>
     )
 };
@@ -97,11 +95,7 @@ const CustomNight = ({ state, setStart, hourLength, setHourLength }) => {
                 <img alt="GitHub" src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg" width="50" height="50" />
             </a>
 
-            <h1>{"Pięć Nocy u Laury"}</h1>
-        <div className={styles.laura}>
-            <img alt="Laura" src={Laura}/>
-        </div>
-            
+            <h1>{"Five Nights at Freddy's Web"}</h1>
 
             <div className={styles.animatronics_container}>
                 <AnimatronicContainer character={"Freddy"} range={state.ranges.Freddy} {...{ changeRange }} />
@@ -112,7 +106,7 @@ const CustomNight = ({ state, setStart, hourLength, setHourLength }) => {
 
             <div className={styles.start_screen} style={{ margin: "2% auto 1% auto" }}>
                 <button className={styles.ready_button} onClick={handleStart}>
-                    START {"▶"}
+                    READY {"▶"}
                 </button>
             </div>
 
@@ -123,7 +117,7 @@ const CustomNight = ({ state, setStart, hourLength, setHourLength }) => {
                     EASY {hasWon("EASY")}
                 </button>
                 <button onClick={() => {
-                    changeMode("NORMAL") 
+                    changeMode("NORMAL")
                 }} data-selected={state.ranges.mode === "NORMAL"}>
                     NORMAL {hasWon("NORMAL")}
                 </button>
@@ -158,8 +152,7 @@ const CustomNight = ({ state, setStart, hourLength, setHourLength }) => {
             </div>
 
             <footer className={styles.footer}>
-                <p>Dariusz Grubba</p>
-                {/* <p>Made by Wendell de Sousa & Developed by Dorukyum</p> */}
+                <p>Made by Wendell de Sousa & Developed by Dorukyum</p>
                 {/* <p>Five Nights at Freddy's © Scott Cawthon</p> */}
             </footer>
         </div>
