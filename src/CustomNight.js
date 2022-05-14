@@ -24,7 +24,7 @@ const AnimatronicContainer = (props) => {
                 alt="Five Nights At Freddy's"
                 src={images[character]}
                 title={character}
-                altt={character}
+                alt={character}
             />
 
             <div className={styles.range_buttons}>
