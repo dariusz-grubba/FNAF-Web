@@ -8,6 +8,9 @@ import StaticSound from "./media/Sounds/Dead.mp3";
 import VictoryGIF from "./media/Textures/Victory.gif";
 import VictorySound from "./media/Sounds/Clock.mp3";
 
+///89000
+const TIME_TO_CHANGE_HOUR = 89000;
+
 let gameOverAudio = new Audio(StaticSound);
 let hourInterval = null;
 
@@ -20,7 +23,6 @@ function Controller({
     setStart,
     dispatch,
     stages,
-    hourLength,
 }) {
     const [gameOver, setGameOver] = useState(false);
     const [victory, setVictory] = useState(false);
@@ -41,7 +43,7 @@ function Controller({
         setTimeout(() => {
             if (hour === 5 && !gameOver) endGame(true);
             else changeHour(hour);
-        }, hourLength);
+        }, TIME_TO_CHANGE_HOUR);
     }, [hour])
 
     useEffect(() => {

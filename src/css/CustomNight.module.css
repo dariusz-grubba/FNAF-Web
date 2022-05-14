@@ -88,7 +88,6 @@
   font-size: inherit;
   cursor: pointer;
   transition: transform 200ms 50ms;
-  margin: 0 3px 0 3px;
 }
 
 .range_buttons button:not(:disabled):hover,

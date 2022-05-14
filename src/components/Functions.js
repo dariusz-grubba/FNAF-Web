@@ -48,13 +48,13 @@ const checkAnimatronicsPosition = (
     search
 ) => {
     let res = "";
-    if (BonnieLocal === search) {
+    if (BonnieLocal == search) {
         res += "-b";
     }
-    if (ChicaLocal === search) {
+    if (ChicaLocal == search) {
         res += "-c";
     }
-    if (FreddyLocal === search) {
+    if (FreddyLocal == search) {
         res += "-f";
     }
 

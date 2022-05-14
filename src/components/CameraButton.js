@@ -5,7 +5,7 @@ function CameraButton(props) {
     const { handleCameraButton } = props;
 
     const handleCamera = ({ target }) => {
-        if (target.dataset.disabled === "true") {
+        if (target.dataset.disabled == "true") {
             target.dataset.disabled = "false";
             Media.Sounds.OpenCamera.play();
             handleCameraButton();
@@ -19,7 +19,7 @@ function CameraButton(props) {
             <img
                 draggable="false"
                 className="camera-button"
-                alt="Camera button"
+                alt="Botão da camera"
                 data-disabled="true"
                 src={Media.Images.CameraButton}
                 style={{ position: "absolute", zIndex: 1 }}

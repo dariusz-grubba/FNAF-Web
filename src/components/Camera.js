@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
-import { getCam } from "./Images";
+import getCam from "./Images";
 
 import AnimatronicsMoving from "../media/Sounds/garble1.mp3";
 import AnimatronicsMoving2 from "../media/Sounds/garble2.mp3";
@@ -19,8 +19,6 @@ function Camera({
     camera,
     cameraButtonDisappear,
     dispatch,
-    goldenFreddy,
-    setGoldenFreddy,
 }) {
     const [Image, setImage] = useState(Media.Images.Stage);
 
@@ -57,7 +55,7 @@ function Camera({
         if (Chica.camera === camera) result += "_c";
         if (Freddy.camera === camera) result += "_f";
 
-        const newCamera = getCam(result, camera, Foxy.camera, goldenFreddy, setGoldenFreddy);
+        const newCamera = getCam(result, camera, Foxy.camera);
         setImage(newCamera);
     }, [camera, animatronics, areAnimatronicsMoving, animatronics.Foxy.camera]);
 
@@ -65,7 +63,7 @@ function Camera({
         if (areAnimatronicsMoving && isCameraOpen) {
             let MusicNumber = Math.floor(Math.random() * 2);
             let Sound;
-            if (MusicNumber === 1 || MusicNumber === 2) {
+            if (MusicNumber == 1 || MusicNumber == 2) {
                 Sound = new Audio(AnimatronicsMoving);
             } else {
                 Sound = new Audio(AnimatronicsMoving2);

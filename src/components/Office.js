@@ -33,8 +33,6 @@ import RL_CHICA from "../media/Textures/Office/RL_CHICA.webp";
 import RL_LL_CHICA from "../media/Textures/Office/RL_LL_CHICA.webp";
 import RL_LL_BONNIE_CHICA from "../media/Textures/Office/RL_LL_BONNIE_CHICA.webp";
 
-import goldenFreddyImage from "../media/Textures/GoldenFreddy.png"
-
 let canJumpscare = true;
 
 const officeImages = {
@@ -67,7 +65,6 @@ function Office({
   isCameraOpen,
   endGame,
   dispatch,
-  goldenFreddyEnabled,
 }) {
   const [isJumpscare, setIsJumpscare] = useState(null);
   const [background, setBackground] = useState(Default);
@@ -176,7 +173,7 @@ function Office({
         const pauseMusicInterval = setInterval(() => {
           let pauseNumber = Math.floor(Math.random() * 3);
           if (!canJumpscare) clearInterval(pauseMusicInterval);
-          if (pauseNumber === 0 && canJumpscare) {
+          if (pauseNumber == 0 && canJumpscare) {
             setBlackoutBackground(null);
             musicBox.pause();
             clearInterval(pauseMusicInterval);
@@ -184,7 +181,7 @@ function Office({
             const freddyInterval = setInterval(() => {
               let freddyNumber = Math.floor(Math.random() * 9);
               if (!canJumpscare) clearInterval(freddyInterval);
-              if (freddyNumber === 0 && canJumpscare) {
+              if (freddyNumber == 0 && canJumpscare) {
                 const JumpscareImage = FreddyJumpscare1;
                 setBlackoutBackground(JumpscareImage);
                 jumpscareSound.play();
@@ -258,30 +255,11 @@ function Office({
       </div>
     );
 
-  const goldenFreddyInOffice = () => {
-    if (goldenFreddyEnabled) {
-      return (
-        <img
-          alt="Golden Freddy"
-          draggable="false"
-          style={{
-            position: "absolute",
-            left: "24%",
-            top: "32%",
-            height: "68%",
-          }}
-          src={goldenFreddyImage}
-        />
-      );
-    }
-  }
-
   return (
     <>
       {!blackout ? (
         <div className="office-container">
           <div style={{ width: "fit-content" }}>
-            {goldenFreddyInOffice()}
             <img
               alt="Office"
               draggable="false"

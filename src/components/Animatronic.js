@@ -146,7 +146,7 @@ function Animatronic({
   const freddyLaugh = () => {
     if (isBlackout) return;
     let FreddyNumber = Math.floor(Math.random() * 2);
-    if (FreddyNumber === 0) {
+    if (FreddyNumber == 0) {
       Media.Sounds.FreddyLaugh1.play();
     } else {
       Media.Sounds.FreddyLaugh2.play();

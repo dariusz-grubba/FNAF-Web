@@ -6,7 +6,7 @@ function CameraMap(props) {
     return (
         <div className="map" style={{ position: "absolute", zIndex: 10 }}>
             <img
-                alt="Camera map"
+                alt="Mapa da câmera"
                 draggable="false"
                 src={Media.Images.Map}
                 style={{ zIndex: "1", width: "100%" }}

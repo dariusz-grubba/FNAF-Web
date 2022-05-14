@@ -18,13 +18,13 @@ const initialState = {
 const Start = () => {
   const [Start, setStart] = useState(false);
   const [stages, setStages] = useState(initialState);
-  const [hourLength, setHourLength] = useState(89000);
 
   useEffect(() => {
     console.log(window.innerHeight > window.innerWidth);
     if (window.innerHeight > window.innerWidth) {
       window.alert(
-        "Rotate your phone to landscape mode for a better experience."
+        `Para uma melhor experiência, vire seu celular para o modo de paisagem (modo deitado)
+                 ~ For a better experience, please rotate your phone to landscape mode`
       );
     }
   }, []);
@@ -35,13 +35,11 @@ const Start = () => {
         <div className="custom-night">
           <CustomNight
             setStart={setStart}
-            state={{ ranges: stages, setStages, setHourLength }}
-            hourLength={hourLength}
-            setHourLength={setHourLength}
+            state={{ ranges: stages, setStages }}
           />
         </div>
       ) : (
-        <Controller stages={stages} setStart={setStart} hourLength={hourLength} />
+        <Controller stages={stages} setStart={setStart} />
       )}
     </>
   );
