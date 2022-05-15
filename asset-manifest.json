@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FNAF-Web/static/css/main.b2b9c922.css",
-    "main.js": "/FNAF-Web/static/js/main.348066fe.js",
+    "main.js": "/FNAF-Web/static/js/main.5d3a3947.js",
     "static/media/Freddy-Jumpscare1.gif": "/FNAF-Web/static/media/Freddy-Jumpscare1.b2a60852f029c5799344.gif",
     "static/media/Foxy-Jumpscare.gif": "/FNAF-Web/static/media/Foxy-Jumpscare.92b454c50d2cd9355658.gif",
     "static/media/FNAF.webp": "/FNAF-Web/static/media/FNAF.94867c30d2d9e5cdb96a.webp",
@@ -94,10 +94,10 @@
     "static/media/blip3.mp3": "/FNAF-Web/static/media/blip3.6efd12cd761b63b4fe7f.mp3",
     "index.html": "/FNAF-Web/index.html",
     "main.b2b9c922.css.map": "/FNAF-Web/static/css/main.b2b9c922.css.map",
-    "main.348066fe.js.map": "/FNAF-Web/static/js/main.348066fe.js.map"
+    "main.5d3a3947.js.map": "/FNAF-Web/static/js/main.5d3a3947.js.map"
   },
   "entrypoints": [
     "static/css/main.b2b9c922.css",
-    "static/js/main.348066fe.js"
+    "static/js/main.5d3a3947.js"
   ]
 }
