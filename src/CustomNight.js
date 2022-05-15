@@ -95,7 +95,7 @@ const CustomNight = ({ state, setStart, hourLength, setHourLength }) => {
                 <img alt="GitHub" src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg" width="50" height="50" />
             </a>
 
-            <h1>{"Five Nights at Freddy's Web"}</h1>
+            <h1>{"5 nocy u laury!!"}</h1>
 
             <div className={styles.animatronics_container}>
                 <AnimatronicContainer character={"Freddy"} range={state.ranges.Freddy} {...{ changeRange }} />
